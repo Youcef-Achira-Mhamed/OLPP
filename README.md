@@ -1,5 +1,5 @@
 # OLPP
-#Online Learning Platform: A platform that allows users to sign up for online courses, attend virtual classes, complete assignments, and receive certifications.
+#Online Learning Platform : A platform that allows users to sign up for online courses, attend virtual classes, complete assignments, and receive certifications.
 
 #Core Features to include:
 
