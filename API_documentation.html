@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Server Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007bff;
+        }
+        pre {
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Node.js Server Documentation</h1>
+</header>
+
+<nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#api-endpoints">API Endpoints</a>
+    <a href="#usage">Usage</a>
+</nav>
+
+<section id="introduction">
+    <h2>Introduction</h2>
+    <p>This documentation covers the setup and usage of the Node.js server for your application. The server provides a RESTful API for various functionalities.</p>
+</section>
+
+
+<section id="api-endpoints">
+    <h2>API Endpoints</h2>
+    <p>The following endpoints are available:</p>
+    <ul>
+        <li><strong>POST /check-email</strong> <br><br>sends verification mail
+            <br>
+            Data which would be sent (as json):
+            <pre><code class="language-javascript">
+                {
+                    fname : //First name ,
+                    lname : //Last name,
+                    email : //email,
+                    password : // password,
+                    username : //username,
+                }
+            </code></pre>
+            it response by: <br><br>
+            <strong>&nbsp; &nbsp;Status 401 (bad request)</strong>: if email or username already exits <br>
+            <strong>&nbsp; &nbsp;Status 500 (Internal server error)</strong>: if error occurs in the server <br>
+            <strong>&nbsp; &nbsp;Status 200 (Sucess)</strong>: if email is sent. <br><br><br>
+        </li>
+        <li><strong>POST /login</strong> <br><br>sends login request
+            <br>
+            Data which would be sent (as json):
+            <pre><code class="language-javascript">
+                {
+                    password : // password,
+                    username : //username but also it can be email
+                    
+                }
+            </code></pre>
+            it response by: <br><br>
+            <strong>&nbsp; &nbsp;Status 403 (Invalid login)</strong>: for invalid logins<br>
+            <strong>&nbsp; &nbsp;Status 500 (Internal server error)</strong>: if error occurs in the server <br>
+            <strong>&nbsp; &nbsp;Status 200 (Sucess) </strong>: for valid logins <br><br>
+            for valid logins it returns :
+            <pre><code class="language-json">
+                {
+                    "username" : //username,
+                }
+            </code></pre>
+            <br><br>
+        </li>
+    </ul>
+</section>
+
+<section id="usage">
+    <h2>Usage</h2>
+    <p>To use the API, make requests using your preferred method:</p>
+    <pre><code class="language-javascript">
+        //you can use axios but if it didn't work use the following code
+        fetch('https://astonishing-beneficial-ocelot.glitch.me/THE-END-POINT', {
+            method:'POST' // OR GET,
+            body:JSON.stringify(
+                // the data object
+            ),
+            headers:{
+                'Content-Type':'application/json'
+            }
+        }).then(res => {
+            if (res.status == number ){    // any number except 200
+                //do something according to the number
+            }
+            else if (res.status == 200){ //Sucess case
+                res.text().then(data => {             // the data is what the response returns (as json)
+                    const js_data = JSON.parse(data); // converst json to js object or array
+                    //do what you want with this object
+                })
+            } 
+        })
+</code></pre>
+    <p>Refer to the specific API endpoint documentation for details on request/response formats.</p>
+</section>
+
+
+
+<footer>
+    <p>© 2024 Ali Younes. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+</body>
+</html>
