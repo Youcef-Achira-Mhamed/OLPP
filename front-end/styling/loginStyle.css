@@ -1,124 +1,203 @@
-/* General body styling */
+/* General Settings */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    height: 100vh;  /* Make the body fill the full height of the viewport */
+    font-family: 'Arial', sans-serif;
+    background: #f6f5f7;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Main container (holds both parts) */
-.main-container {
-    display: flex;
-    width: 100vw;           /* Make the container fill the full width of the viewport */
-    height: 100vh;          /* Make the container fill the full height of the viewport */
-    background-color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
+                0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    width: 900px; /* Reduced width to prevent overflowing */
+    max-width: 100%;
+    min-height: 600px;
     overflow: hidden;
+    display: flex;
 }
 
-/* Left part styling (Logo and text) */
-.left-part {
-    flex: 1;
-    background-image:linear-gradient(#55d555 , #04AA6D);    
-    color: white;
+/* Form Containers */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
     padding: 40px;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.sign-up-container {
+    left: -100px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.login-container {
+    left: -20px;
+    z-index: 2;
+    opacity: 1;
+}
+
+/* Overlay */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay {
+    background: #1a6e9d;
+    color: #fff;
+    position: relative;
+    height: 100%;
+    width: 200%;
+    left: -100%;
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 50%;
+    padding: 0 40px;
     text-align: center;
-    position-anchor: 50px 100px;
-    
+}
+
+.overlay-left {
+    /* Removed transform: translateX(-20%); */
+}
+
+.overlay-right {
+    right: 0;
+    /* Ensures no horizontal shift */
 }
 
 .logo {
-    width: 350px;
-    height: auto;
+    height: 100px;
     margin-bottom: 20px;
 }
 
-.left-part h1 {
-    font-size: 28px; /* Increased font size to make it stand out */
-    margin-bottom: 20px;
+/* Input and Button Styling */
+input {
+    background: #eee;
+    border: none;
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%; /* Ensure inputs are within the container */
+    max-width: 350px; /* Prevent overflow on larger screens */
+    border-radius: 5px;
 }
 
-.left-part p {
-    color: #023047;
-    font-weight: bolder;
-    font-size: 18px;
-    width: 500px;
-    line-height: 1.5;
-}
-
-/* Right part styling (Login form) */
-.right-part {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+button {
+    border-radius: 20px;
+    border: 1px solid #1a6e9d;
+    background-color: #1a6e9d;
+    color: white;
+    font-size: 16px;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    cursor: pointer;
     
 }
 
-/* Form container */
-.form-container {
-    width: 100%;
+
+button:hover {
+    background-color: #155d81;
+    transform: scale(1.05);
 }
 
-h2 {
-    text-align: center;
-    color: #333;
+h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
     margin-bottom: 20px;
 }
 
-/* Form input styling */
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 15px; /* Increased padding for larger input fields */
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Submit button */
-input[type="submit"] {
-    width: 100%;
-    padding: 15px; /* Increased padding for a larger button */
-    background-color:  #04AA6D;
-    border: none;
-    color: white;
-    border-radius: 4px;
+.ghost {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+    padding: 12px 45px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 16px; /* Increased font size */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #109263;
+.ghost:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
-/* Sign-up link */
-.signup-link {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
+/* Right Panel Active */
+.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
 }
 
-.signup-link a {
-    color: #04AA6D;
-    text-decoration: none;
+.right-panel-active .login-container {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
 }
 
-.signup-link a:hover {
-    text-decoration: underline;
+.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+/* Responsive Settings */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .form-container, .overlay-container {
+        width: 100%;
+        left: 0;
+    }
+    
+    .overlay {
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+    }
+    
+    .overlay-panel {
+        padding: 20px;
+    }
+
+    input {
+        width: 90%; /* Ensures input fits well on small screens */
+        max-width: none;
+    }
 }
