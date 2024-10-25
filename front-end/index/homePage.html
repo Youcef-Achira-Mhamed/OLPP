@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../styling/">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="path-to-your-logo/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="account-options">
+            <div class="account-circle">
+                <img src="path-to-account-icon/account.png" alt="Account" class="account-icon">
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn">Log In</button>
+                <button id="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <nav class="hamburger-menu">
+        <div class="menu-icon">
+            <span class="hamburger-icon">&#9776;</span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1>Welcome to Our Platform!</h1>
+        <img src="path-to-your-logo/logo.png" alt="Site Logo" class="site-logo">
+        <p>Discover our vast collection of videos and categories. Start exploring today!</p>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <h2>Categories</h2>
+        <div class="categories-container">
+            <div class="category">Music</div>
+            <div class="category">Sports</div>
+            <div class="category">Education</div>
+            <div class="category">Technology</div>
+            <!-- Add more categories as needed -->
+        </div>
+    </section>
+
+    <!-- Video Suggestions Section -->
+    <section class="video-suggestions-section">
+        <h2>Recommended Videos</h2>
+        <div class="video-container">
+            <div class="video-card">
+                <img src="path-to-thumbnail/thumbnail1.jpg" alt="Video Thumbnail">
+                <p>Video Title 1</p>
+            </div>
+            <div class="video-card">
+                <img src="path-to-thumbnail/thumbnail2.jpg" alt="Video Thumbnail">
+                <p>Video Title 2</p>
+            </div>
+            <div class="video-card">
+                <img src="path-to-thumbnail/thumbnail3.jpg" alt="Video Thumbnail">
+                <p>Video Title 3</p>
+            </div>
+            <!-- Add more video cards as needed -->
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

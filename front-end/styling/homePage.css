@@ -1,0 +1,199 @@
+/* General Settings */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f5f7;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a6e9d;
+    color: white;
+    margin-left: 60px; /* To make room for the fixed hamburger menu */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.account-options {
+    display: flex;
+    align-items: center;
+}
+
+.account-circle {
+    margin-right: 15px;
+}
+
+.account-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.auth-buttons button {
+    background-color: white;
+    color: #1a6e9d;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-buttons button:hover {
+    background-color: #155d81;
+    color: white;
+}
+
+/* Fixed Hamburger Menu */
+.hamburger-menu {
+    position: fixed; /* Fixed position to stay on screen */
+    top: 0;
+    left: 0;
+    width: 60px; /* Narrow width to fit the hamburger icon */
+    height: 100vh; /* Full height of the page */
+    background-color: #1a6e9d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1000; /* Ensures it's always on top */
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.menu-items li {
+    margin: 20px 0;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-items a:hover {
+    background-color: #155d81;
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-left: 60px; /* To avoid the fixed hamburger menu */
+}
+
+.welcome-section h1 {
+    color: #1a6e9d;
+    margin-bottom: 20px;
+}
+
+.site-logo {
+    height: 100px;
+    margin: 20px 0;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 30px 20px;
+    background-color: #f6f5f7;
+    margin-left: 60px; /* Aligns with the menu */
+}
+
+.categories-section h2 {
+    text-align: center;
+    color: #1a6e9d;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.category:hover {
+    background-color: #1a6e9d;
+    color: white;
+}
+
+/* Video Suggestions Section */
+.video-suggestions-section {
+    padding: 30px 20px;
+    background-color: #fff;
+    margin-left: 60px; /* Aligns with the menu */
+}
+
+.video-suggestions-section h2 {
+    text-align: center;
+    color: #1a6e9d;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    width: 200px;
+    background-color: #f6f5f7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.video-card p {
+    color: #333;
+}
