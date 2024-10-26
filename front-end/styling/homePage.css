@@ -112,6 +112,7 @@ header{
     height: calc(100vh - 56px);
     display: flex;
     background-color: #f9f9f9;
+    
 }
 
 aside{
@@ -119,6 +120,9 @@ aside{
     width: 280px;
     background-color: white;
     overflow-y: auto;
+    left: 0;
+    top: 56px; /* Offset to align with the header */
+    transition: transform 0.3s ease;
 }
 
 nav{
@@ -160,4 +164,86 @@ hr{
     border: none;
     background-color: #e5e5e5;
     margin: 10px 0px;
+}
+
+
+.hidden {
+    transform: translateX(-280px); /* Move sidebar out of view */
+}
+
+.hidden + main {
+    margin-left: -280px; /* Adjust content area when sidebar is hidden */
+}
+
+main{
+    width: 100%;
+    margin: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns all child elements to the left */
+    background-color: #f0f8ff; /* Fallback color */
+    background-image: url(../resources/EduVerse-Banner.png);
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+    color: #333;
+    padding: 40px;
+    text-align: left; /* Align text to the left */
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+}
+
+.welcome-section h1 {
+    font-size: 7rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.welcome-section p {
+    font-size: 2rem;
+    color: #555;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.welcome-section form {
+    display: flex;
+    justify-content: flex-start; /* Align the form to the left */
+    width: 100%;
+    max-width: 400px; /* Limits the width */
+}
+
+
+.welcome-section input[type=text]{
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #282A35;
+    border-radius: 25px;
+    width: 80%;
+    background: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    border-right: 1px solid #04AA6D;
+    outline: 0;
+}
+
+.welcome-section button{
+    border-radius: 25px;
+    width: 20%;
+    padding: 10px;
+    background: #1A6F9D;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #282A35;
+    border-left: none;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
