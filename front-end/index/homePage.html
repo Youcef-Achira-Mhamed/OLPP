@@ -2,80 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="../styling/">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../styling/homePage.css">
+    <title>Youtube</title>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="logo-container">
-            <img src="path-to-your-logo/logo.png" alt="Logo" class="logo">
+    <header>
+        <div class="left-section">
+            <i class="material-icons logo">menu</i>
+            <img class="logo" src="../resources/logo/logo.png" alt="logo">
         </div>
-        <div class="account-options">
-            <div class="account-circle">
-                <img src="path-to-account-icon/account.png" alt="Account" class="account-icon">
-            </div>
-            <div class="auth-buttons">
-                <button id="login-btn">Log In</button>
-                <button id="signup-btn">Sign Up</button>
-            </div>
+        <div class="mid-section">
+            <form action="">
+                <input type="text" placeholder="Search" name="" id="">
+                <button><i class="material-icons">search</i></button>
+            </form>
+        </div>
+        <div class="right-section">
+            <button>Login / SignUp</button>
+            <a href=""><i class="material-icons">notifications</i></a>
+            <a href=""><i class="material-icons">account_circle</i></a>
         </div>
     </header>
 
-    <!-- Hamburger Menu -->
-    <nav class="hamburger-menu">
-        <div class="menu-icon">
-            <span class="hamburger-icon">&#9776;</span>
-        </div>
-        <ul class="menu-items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </nav>
+    <div class="content-area">
+        <aside>
+            <nav>
+                <a href="" class="nav-link active">
+                    <i class="material-icons">home</i>
+                    <span id="active-span">Home</span>
+                </a>
 
-    <!-- Welcome Section -->
-    <section class="welcome-section">
-        <h1>Welcome to Our Platform!</h1>
-        <img src="path-to-your-logo/logo.png" alt="Site Logo" class="site-logo">
-        <p>Discover our vast collection of videos and categories. Start exploring today!</p>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="categories-section">
-        <h2>Categories</h2>
-        <div class="categories-container">
-            <div class="category">Music</div>
-            <div class="category">Sports</div>
-            <div class="category">Education</div>
-            <div class="category">Technology</div>
-            <!-- Add more categories as needed -->
-        </div>
-    </section>
-
-    <!-- Video Suggestions Section -->
-    <section class="video-suggestions-section">
-        <h2>Recommended Videos</h2>
-        <div class="video-container">
-            <div class="video-card">
-                <img src="path-to-thumbnail/thumbnail1.jpg" alt="Video Thumbnail">
-                <p>Video Title 1</p>
-            </div>
-            <div class="video-card">
-                <img src="path-to-thumbnail/thumbnail2.jpg" alt="Video Thumbnail">
-                <p>Video Title 2</p>
-            </div>
-            <div class="video-card">
-                <img src="path-to-thumbnail/thumbnail3.jpg" alt="Video Thumbnail">
-                <p>Video Title 3</p>
-            </div>
-            <!-- Add more video cards as needed -->
-        </div>
-    </section>
-
-    <script src="main.js"></script>
+                <a href="" class="nav-link">
+                    <i class="material-icons">home</i>
+                    <span>Home</span>
+                </a>
+                <hr>
+            </nav>
+        </aside>
+    </div>
 </body>
 </html>
