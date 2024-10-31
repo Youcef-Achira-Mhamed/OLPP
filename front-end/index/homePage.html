@@ -21,10 +21,11 @@
             </form>
         </div>
         <div class="right-section">
-            <button>Login / SignUp</button>
-            <a href=""><i class="material-icons">notifications</i></a>
-            <a href=""><i class="material-icons">account_circle</i></a>
+            <button id="loginSignupButton">Login / SignUp</button>
+            <a href="#" class="notifications"><i class="material-icons">notifications</i></a>
+            <a href="#" class="account-circle"><i class="material-icons">account_circle</i></a>
         </div>
+        
     </header>
 
     <div class="content-area">
@@ -34,10 +35,22 @@
                     <i class="material-icons">home</i>
                     <span id="active-span">Home</span>
                 </a>
+                <a href="" class="nav-link">
+                    <i class="material-icons">trending_up</i>
+                    <span>Trending</span>
+                </a>
 
                 <a href="" class="nav-link">
-                    <i class="material-icons">home</i>
-                    <span>Home</span>
+                    <i class="material-icons">school</i>
+                    <span>My Courses</span>
+                </a>
+                <a href="" class="nav-link">
+                    <i class="material-icons">shopping_cart</i>
+                    <span>Cart</span>
+                </a>
+                <a href="" class="nav-link">
+                    <i class="material-icons">star</i>
+                    <span>Wishlist</span>
                 </a>
                 <hr>
             </nav>
@@ -53,10 +66,108 @@
                 </form>
             </div>
 
-            <div class="categories">
-          
+            <!-- Categories Section -->
+            <section id="categories-section">
+                <h2 class="categories-heading">Explore Our Categories</h2>
+                <div class="categories">
+                    <a href="#" class="category-button">Web Development</a>
+                    <a href="#" class="category-button">Mobile Development</a>
+                    <a href="#" class="category-button">Desktop Development</a>
+                    <a href="#" class="category-button">Game Development</a>
+                    <a href="#" class="category-button">Artificial Intelligence</a>
+                    <a href="#" class="category-button">Embedded Systems</a>
+                </div>
+            </section>
+
+            <!-- Thumbnails Section -->
+            <section class="thumbnail-section">
+                <div class="thumbnail-grid">
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 1">
+                        <h3 class="thumbnail-title">Introduction to Web Development</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 2">
+                        <h3 class="thumbnail-title">Python for Beginners</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 3">
+                        <h3 class="thumbnail-title">Data Science Basics</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 4">
+                        <h3 class="thumbnail-title">Responsive Web Design</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 5">
+                        <h3 class="thumbnail-title">Machine Learning Essentials</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 6">
+                        <h3 class="thumbnail-title">Digital Marketing Fundamentals</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 7">
+                        <h3 class="thumbnail-title">JavaScript and jQuery Crash Course</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 8">
+                        <h3 class="thumbnail-title">Cloud Computing 101</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 9">
+                        <h3 class="thumbnail-title">Intro to Cybersecurity</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 10">
+                        <h3 class="thumbnail-title">Mobile App Development with Flutter</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 11">
+                        <h3 class="thumbnail-title">Game Development with Unity</h3>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="../resources/thumbnail.jpg" alt="Thumbnail 11">
+                        <h3 class="thumbnail-title">Game Development with Unity</h3>
+                    </div>
+
+                </div>
+
+                <!-- See More Button -->
+                <a href="#" class="see-more-button">See More</a>
+            </section>
+            <br><br><br><br><br>
+
+            <footer class="footer">
+                <div class="footer-container">
+        
+                    <div class="footer-column">
+                        <h4>Company Name</h4>
+                        <p>Your trusted partner in quality content and community connection... Eduverse !</p>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <p>Email: Eduverse@gmail.com</p>
+                        <p>Phone: +213 773868974</p>
+                        <p>Address: 83, Site 6, Sidi Belabbas , Algeria</p>
+                    </div>
+                </div>
+            </footer>
+   
         </main>
-    </div>
+    </div>  
 
     <script src="../script/homePage.js"></script>
 </body>

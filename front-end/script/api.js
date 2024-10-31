@@ -14,10 +14,12 @@ loginForm.addEventListener('submit', async (e) => {
       
       // If login is successful
       if (response.status === 200) {
+        
+        localStorage.setItem('isLoggedIn', true);
+        localStorage.setItem('userPhoto', response.data.photo || 'default-photo-url'); // Replace 'default-photo-url' if needed
+        
         alert('Login successful!');
-
-        // Redirect to a specific page (e.g., dashboard)
-        window.location.href = '/dashboard';  // Replace with the actual path of the page you want to navigate to
+        window.location.href = '/home';
       }
     } catch (error) {
       alert(`Error: ${error}`);
