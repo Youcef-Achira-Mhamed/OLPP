@@ -1,0 +1,267 @@
+body {
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "left-container vidio-chapters";
+}
+.left-container {
+  grid-area: left-container;
+  display: grid;
+  grid-template-rows: 550px 1fr;
+  grid-template-areas:
+    "vidio-display"
+    "vidio-details";
+  overflow-y: scroll;
+}
+.left-container::-webkit-scrollbar {
+  display: none;
+}
+/* Vidio Display */
+.vidio-display {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.current-vidio {
+  width: 90%;
+  top: 5%;
+  box-shadow: 0 0 10px #2d70ff;
+}
+.current-title {
+  margin: 10px;
+  padding: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+}
+/* vidio-details */
+.vidio-details {
+  padding: 10px;
+  margin: 10px;
+  grid-area: vidio-details;
+  box-shadow: 0 0 10px #bde0fe;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.details-header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.details-header h4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  border-left-style: solid;
+}
+.details-header h4:hover {
+  background-color: #00bbff2e;
+}
+.the-footer {
+  width: 100%;
+  height: 200px;
+  background-color: #2d70ff;
+}
+/* div-general */
+.div-general {
+  height: 1000px;
+  width: 980px;
+  background-color: rgb(207, 226, 226);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.para-1 {
+  width: 90%;
+  height: 100px;
+  border-style: solid;
+}
+/* div-cours-files */
+.div-cours-files {
+  height: 100px;
+  width: 100%;
+  background-color: aquamarine;
+}
+/* div-comments */
+.div-comments {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(205, 229, 245);
+  display: flex;
+  flex-direction: column;
+}
+.input-comment {
+  width: 50%;
+  padding-left: 10px;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+.btn-comment {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  background-color: #559fe0;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+  margin: 10px;
+}
+.btn-comment:hover {
+  background-color: #559fe0b7;
+}
+.other-comments {
+  width: 90%;
+  height: 700px;
+  overflow-y: scroll;
+  background-color: #559fe087;
+  padding: 20px;
+  .this-comment {
+    display: flex;
+    position: relative;
+    p {
+      margin: 0%;
+      padding: 10px;
+      display: flex;
+      width: 700px;
+      border: none;
+      background-color: #f29e283e;
+      box-shadow: 0 0 5px black;
+    }
+    img {
+      margin-right: 10px;
+    }
+    div figure{
+      width: 30px;
+      text-align: center;
+      cursor: pointer;
+  }
+  }
+}
+.other-comments::-webkit-scrollbar {
+  display: none;
+}
+/* div-others */
+.div-others {
+  height: 100px;
+  width: 100%;
+  background-color: chartreuse;
+}
+/* div-about-eduverse */
+.div-about-eduverse {
+  height: 100px;
+  width: 100%;
+  background-color: chocolate;
+}
+
+/* vidio-chapters */
+.vidio-chapters {
+  height: 100vh;
+  width: 500px;
+  grid-area: vidio-chapters;
+  font-weight: bolder;
+  box-shadow: 0 0 5px black;
+  transition: all 0.5s;
+  display: grid;
+  grid-template-rows: 55px 650px;
+  grid-template-areas: "title-chapters" "div-chapters";
+}
+.div-chapters::-webkit-scrollbar {
+  display: none;
+}
+
+.title-chapters {
+  grid-area: title-chapters;
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  height: 70px;
+  box-shadow: 0 5px 5px black;
+  background-color: #bde0fe;
+}
+.div-chapters {
+  grid-area: div-chapters;
+  padding: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.label-chapers {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  color: #071f53;
+}
+.image-arrow {
+  width: 50px;
+  cursor: pointer;
+  margin: 5px;
+}
+.image-arrow:hover {
+  opacity: 0.7;
+}
+
+/* Chapters List */
+.vidios {
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  box-shadow: 0 0 5px;
+  background-color: #00bbff2e;
+}
+.vidios:hover {
+  background-color: #006597c6;
+}
+.no-chapters {
+  margin: 5px;
+  font-size: 24px;
+}
+.vidio-title {
+  margin: 10px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  width: 60%;
+}
+.cover {
+  position: relative;
+}
+.image-cover {
+  width: 180px;
+  margin: 7px;
+}
+.vidio-time {
+  color: black;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  margin: 0%;
+  padding: 2px;
+  background-color: #bde0feb7;
+  border-radius: 3px;
+}

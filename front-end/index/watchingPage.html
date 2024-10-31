@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styling/watchingPage.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-container">
+        <!--Vidio Display-->
+        <div class="vidio-display">
+          <p class="current-title">
+            #1 &nbsp; This is the first vidio you watch
+          </p>
+          <video controls class="current-vidio" src="" alt="sdkfjkldf"></video>
+        </div>
+        <!--Vidio Detials-->
+        <div class="vidio-details">
+          <header class="details-header">
+            <h4>General</h4>
+            <h4>Cours Files</h4>
+            <h4>Comments</h4>
+            <h4>Others</h4>
+            <h4>About Eduverse</h4>
+          </header>
+          <!-- <div class="div-general">
+            <p>About Course :</p>
+            <p class="para-1"></p>
+          </div> -->
+          <!-- <div class="div-cours-files">kjsdfjsdkf</div> -->
+          <div class="div-comments">
+            <center>
+              <div>
+                <input type="text" class="input-comment" />
+                <button class="btn-comment">Comment</button>
+              </div>
+            </center>
+            <div class="other-comments">
+              <div class="this-comment">
+                <img
+                  src="../resources/3.png"
+                  alt=""
+                  width="50px"
+                  height="50px"
+                />
+                <p>
+                  it is a beautiful <br />coures i recomend it sdfsdfg fgrtfg
+                  rth erth <br />
+                  ter erthertherthe rt <br />he erthrt gsdfg dfgsdfg sdfsdfg sdf
+                  <br />sdfg sdfg sdfg sdfg sdfg sdfg sdfg sd
+                </p>
+                <div id="R1">
+                  <figure class="like">
+                    <img
+                      src="../resources/heart-n-empty.png"
+                      alt="Description of the image"
+                      width="30px"
+                      onclick="likeComment('R1')"
+                    />
+                    <figcaption>100</figcaption>
+                  </figure>
+                  <figure class="unlike">
+                    <img
+                      src="../resources/heart-b-empty.png"
+                      alt="Description of the image"
+                      width="30px"
+                      onclick="unlikeComment('R1')"
+                    />
+                    <figcaption>50</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <br />
+              <hr color="black" />
+            </div>
+          </div>
+          <!--<div class="div-others">kjsdfjsdkf</div>
+          <div class="div-about-eduverse">kjsdfjsdkf</div> -->
+          <footer class="the-footer">
+            class="the-footer">This is The footer
+          </footer>
+        </div>
+      </div>
+      <!--Vidio Chapters-->
+      <div class="vidio-chapters">
+        <div class="title-chapters">
+          <img
+            src="../resources/menu1.png"
+            alt=""
+            class="image-arrow"
+            width="50px"
+            onclick="chaptersAnimation()"
+          />
+          <h2 class="label-chapers">Course Chapters</h2>
+        </div>
+        <div class="div-chapters">
+          <div class="vidios">
+            <div class="no-chapters">#3</div>
+            <div class="cover">
+              <img class="image-cover" src="../resources/3.png" alt="vidio" />
+              <h5 class="vidio-time">23:34</h5>
+            </div>
+            <div class="vidio-title">
+              Full Tuturiol For Css Html Js to become a fronent developer
+            </div>
+          </div>
+          <div class="vidios">
+            <div class="no-chapters">#3</div>
+            <div class="cover">
+              <img class="image-cover" src="../resources/3.png" alt="vidio" />
+              <h5 class="vidio-time">23:34</h5>
+            </div>
+            <div class="vidio-title">
+              Full Tuturiol For Css Html Js to become a fronent developer
+            </div>
+          </div>
+          <div class="vidios">
+            <div class="no-chapters">#3</div>
+            <div class="cover">
+              <img class="image-cover" src="../resources/3.png" alt="vidio" />
+              <h5 class="vidio-time">23:34</h5>
+            </div>
+            <div class="vidio-title">
+              Full Tuturiol For Css Html Js to become a fronent developer
+            </div>
+          </div>
+          <div class="vidios">
+            <div class="no-chapters">#3</div>
+            <div class="cover">
+              <img class="image-cover" src="../resources/3.png" alt="vidio" />
+              <h5 class="vidio-time">23:34</h5>
+            </div>
+            <div class="vidio-title">
+              Full Tuturiol For Css Html Js to become a fronent developer
+            </div>
+          </div>
+          <div class="vidios">
+            <div class="no-chapters">#3</div>
+            <div class="cover">
+              <img class="image-cover" src="../resources/3.png" alt="vidio" />
+              <h5 class="vidio-time">23:34</h5>
+            </div>
+            <div class="vidio-title">
+              Full Tuturiol For Css Html Js to become a fronent developer
+            </div>
+          </div>
+          <div class="vidios">
+            <div class="no-chapters">#3</div>
+            <div class="cover">
+              <img class="image-cover" src="../resources/3.png" alt="vidio" />
+              <h5 class="vidio-time">23:34</h5>
+            </div>
+            <div class="vidio-title">
+              Full Tuturiol For Css Html Js to become a fronent developer
+            </div>
+          </div>
+          <div class="vidios">
+            <div class="no-chapters">#3</div>
+            <div class="cover">
+              <img class="image-cover" src="../resources/3.png" alt="vidio" />
+              <h5 class="vidio-time">23:34</h5>
+            </div>
+            <div class="vidio-title">
+              Full Tuturiol For Css Html Js to become a fronent developer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../script/watchingPage.js"></script>
+  </body>
+</html>
