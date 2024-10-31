@@ -139,7 +139,7 @@ aside{
     height: 100%;
     width: 280px;
     background-color: white;
-    overflow-y:unset;
+    overflow-y:auto;
     position: sticky; 
     left: 0;
     top: 56px; /* Offset to align with the header */
