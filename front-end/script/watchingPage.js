@@ -21,16 +21,26 @@ function chaptersAnimation() {
   }
   boolSidebar = !boolSidebar;
 }
+
+class likeState {
+  likeState() {
+    state = null;
+  }
+
+  set() {
+    
+  }
+}
+
 function likeComment(id) {
   const reaction = document.getElementById(id);
   reaction.innerHTML = `
-  <div id=${id}>
                   <figure class="like">
                     <img
                       src="../resources/heart-n-red.png"
                       alt="300"
                       width="30px"
-                      onclick="likeComment(${id})"
+                      onclick="likeComment('${id}')"
                     />
                     <figcaption>100</figcaption>
                   </figure>
@@ -39,25 +49,21 @@ function likeComment(id) {
                       src="../resources/heart-b-empty.png"
                       alt="45"
                       width="30px"
-                      onclick="unlikeComment(${id})"
+                      onclick="unlikeComment('${id}')"
                     />
                     <figcaption>50</figcaption>
                   </figure>
-                  </div>
     `;
-  console.log("succsdfsdf");
 }
 function unlikeComment(id) {
   const reaction = document.getElementById(id);
-  console.log("succsdfsdf2");
   reaction.innerHTML = `
-  <div id=${id}>
                   <figure class="like">
                     <img
                       src="../resources/heart-n-empty.png"
                       alt="99"
                       width="30px"
-                      onclick="likeComment(${id})"
+                      onclick="likeComment('${id}')"
                     />
                     <figcaption>100</figcaption>
                   </figure>
@@ -66,11 +72,9 @@ function unlikeComment(id) {
                       src="../resources/heart-b-black.png"
                       alt="100"
                       width="30px"
-                      onclick="unlikeComment(${id})"
+                      onclick="unlikeComment('${id}')"
                     />
                     <figcaption>50</figcaption>
                   </figure>
-                  </div>
     `;
-  console.log("succsdfsdf3");
 }

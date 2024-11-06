@@ -10,16 +10,17 @@ loginForm.addEventListener('submit', async (e) => {
 
     try {
       // Send POST request to the server
-      const response = await axios.post('https://astonishing-beneficial-ocelot.glitch.me/login', data);
+      const response = await axios.post('http://localhost:5000/signlog/login', data);
       
       // If login is successful
       if (response.status === 200) {
         
         localStorage.setItem('isLoggedIn', true);
         localStorage.setItem('userPhoto', response.data.photo || 'default-photo-url'); // Replace 'default-photo-url' if needed
+        localStorage.setItem('username', data.username);
         
         alert('Login successful!');
-        window.location.href = '/home';
+        window.location.href = '../index/homePage.html';
       }
     } catch (error) {
       alert(`Error: ${error}`);
@@ -43,7 +44,7 @@ loginForm.addEventListener('submit', async (e) => {
 
     try {
       // Send POST request to the server
-      const response = await axios.post('https://astonishing-beneficial-ocelot.glitch.me/check-email', data);
+      const response = await axios.post('http://localhost:5000/signlog/check-email', data);
       
       // If sign-up is successful
       if (response.status === 200) {  // Typically, a successful sign-up returns a 201 Created status

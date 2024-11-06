@@ -36,15 +36,17 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     // Fetch and display courses in the thumbnail section
     await fetchCourses();
+    
 });
 
 // Fetch and display courses
 async function fetchCourses() {
     try {
-        const response = await axios.get('https://your-api-url.com/courses');
-        
+        const response = await axios.get(`http://localhost:5000/home/get-12-course/${localStorage.getItem('username')}`);
+        console.log('pass ... ');
         if (response.status === 200) {
             const courses = response.data;
+            console.log(courses);
             displayCourses(courses);
         }
     } catch (error) {
